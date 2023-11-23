@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 14:24:12 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/18 14:24:59 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/11/20 09:34:27 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(int ac, char *av[])
 			std::string str = av[i];
 			for (size_t j = 0; j < str.length(); j++)
 				str[j] = toupper(str[j]);
-			std::cout <<str<<" ";
+			std::cout <<str;
 		}
 	}
 	else

@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 16:58:52 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/18 11:00:07 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/11/21 09:53:24 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ bool check_if_isdigit(std::string d)
 
 int is_validIndex(int n, int i)
 {
-	if (n >= i)
+	if (n >= i || n >= 8 || n < 0)
 	{
 		std::cout<<"\033[0;31minvalid index😵, try again\033[0m\n";
 		return(0);
@@ -52,7 +52,7 @@ int PhoneBook::search()
 {
 	if (i == 0)
 	{
-		std::cout<<"\033[0;31mPhone Booc is empty!\033[0m😶\n";
+		std::cout<<"\033[0;31mPhone Book is empty!\033[0m😶\n";
 		return(1);
 	}
 	else

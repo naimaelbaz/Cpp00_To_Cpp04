@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 14:45:48 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/20 10:17:01 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/11/23 17:46:24 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/11/23 19:39:43 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include <iostream>
 
-#include "Contact.hpp"
-
-class PhoneBook
+int main()
 {
-	private:
-		Contact contact[8];
-		int		i;
-	public:
-		PhoneBook();
-		void add();
-		int search();
-};
-
-#endif
+	std::string B = "HI THIS IS BRAIN";
+	std::string *stringPTR = &B;
+	std::string& stringREF = B;
+	
+	std::cout << &B << "\n";
+	std::cout << stringPTR << "\n";
+	std::cout << &stringREF << "\n";
+	std::cout << B << "\n";
+	std::cout << *stringPTR << "\n";
+	std::cout << stringREF << "\n";
+}

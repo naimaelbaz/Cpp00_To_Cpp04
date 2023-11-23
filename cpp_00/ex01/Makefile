@@ -6,7 +6,7 @@
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/12 10:39:51 by nel-baz           #+#    #+#              #
-#    Updated: 2023/11/14 14:51:26 by nel-baz          ###   ########.fr        #
+#    Updated: 2023/11/20 10:14:29 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS = PhoneBook.cpp Contact.cpp main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp
+%.o: %.cpp Contact.hpp PhoneBook.hpp
 	$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME) $(OBJS)

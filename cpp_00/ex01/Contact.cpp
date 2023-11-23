@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 17:01:48 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/16 10:42:33 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/11/20 16:11:54 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ void Contact::setFirstName()
 		std::getline(std::cin,firstName);
 		if (std::cin.eof())
 			std::exit(0);
-} while (!check_if_isEmpty(firstName));
+	} while (!check_if_isEmpty(firstName));
 }
 void Contact::setLastName()
 {

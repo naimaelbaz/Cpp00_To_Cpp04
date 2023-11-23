@@ -5,35 +5,35 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/11/19 11:30:45 by nel-baz           #+#    #+#              #
-#    Updated: 2023/11/20 10:13:57 by nel-baz          ###   ########.fr        #
+#    Created: 2023/11/23 09:47:23 by nel-baz           #+#    #+#              #
+#    Updated: 2023/11/23 18:06:48 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Account
+NAME = brain
 
-CC = c++
+CXX = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = Account.cpp tests.cpp
+SRCS = main.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp Account.hpp
-	$(CC) $(CFLAGS) -c $< -o $@
+%.o: %.cpp 
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
-all : $(NAME) $(OBJS)
+all: $(NAME) $(OBJS)
 
-$(NAME): $(OBJS)
-	$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+$(NAME): $(OBJS) 
+	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-clean:	
+clean:
 	rm -rf $(OBJS)
 
-fclean:	clean
+fclean: clean
 	rm -rf $(NAME)
 
-re : fclean all
+re: all fclean
 
-.PHONY: re all clean fclean
+.PHONY: all clean fclean

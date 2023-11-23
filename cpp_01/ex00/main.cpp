@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 14:45:48 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/20 10:17:01 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/11/23 09:41:18 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/11/23 11:20:59 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-
-class PhoneBook
+int main()
 {
-	private:
-		Contact contact[8];
-		int		i;
-	public:
-		PhoneBook();
-		void add();
-		int search();
-};
-
-#endif
+	randomChump("boo");
+	Zombie *f = newZombie("Foo");
+	f->announce();
+	delete f;
+}

@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 14:45:48 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/20 10:17:01 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/11/23 09:41:18 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/11/23 17:18:51 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "Zombie.hpp"
 
-#include "Contact.hpp"
-
-class PhoneBook
+int main()
 {
-	private:
-		Contact contact[8];
-		int		i;
-	public:
-		PhoneBook();
-		void add();
-		int search();
-};
-
-#endif
+	Zombie *f = zombieHorde(5, "Foo");
+	for (int i = 0; i < 5; i++)
+		f[i].announce();
+	delete[] f;
+}

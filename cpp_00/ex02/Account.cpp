@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:37:48 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/19 13:43:02 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/11/21 17:58:12 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,8 @@ Account :: ~Account()
 
 void Account:: _displayTimestamp()
 {
-	std::time_t currentTime = std::time(nullptr);
+	std::time_t currentTime;
+	std::time(&currentTime);
 	char buffer[18];
 	std::strftime(buffer, sizeof(buffer), "[%Y%m%d_%H%M%S]", std::localtime(&currentTime));
 	std::cout << buffer<<" ";
