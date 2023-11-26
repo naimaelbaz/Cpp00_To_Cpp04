@@ -1,27 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 17:46:24 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/25 08:05:48 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/11/25 09:48:18 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/11/25 12:24:43 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "HumanA.hpp"
 
-int main()
+HumanA::HumanA(Weapon& wep_a, std::string n) : weaponA(wep_a) , name(n)
 {
-	std::string B = "HI THIS IS BRAIN";
-	std::string *stringPTR = &B;
-	std::string& stringREF = B;
-	
-	std::cout << &B << "\n";
-	std::cout << stringPTR << "\n";
-	std::cout << &stringREF << "\n";
-	std::cout << B << "\n";
-	std::cout << *stringPTR << "\n";
-	std::cout << stringREF << "\n";
+}
+
+void HumanA::attack()
+{
+	std::cout << name <<" attacks with their "<<
+				 weaponA.getType() << "\n";
+}
+
+HumanA::~HumanA()
+{
 }

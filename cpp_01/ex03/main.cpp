@@ -5,23 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 17:46:24 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/25 08:05:48 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/11/25 10:33:06 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/11/25 18:21:19 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
-int main()
+int	main(void)
 {
-	std::string B = "HI THIS IS BRAIN";
-	std::string *stringPTR = &B;
-	std::string& stringREF = B;
-	
-	std::cout << &B << "\n";
-	std::cout << stringPTR << "\n";
-	std::cout << &stringREF << "\n";
-	std::cout << B << "\n";
-	std::cout << *stringPTR << "\n";
-	std::cout << stringREF << "\n";
+	{
+		Weapon club("crude spiked club");
+		HumanA bob(club, "Bob");
+		bob.attack();
+		club.setType("some other type of club");
+		bob.attack();
+	}
+	{
+		Weapon club("crude spiked club");
+		HumanB jim("Jim");
+		jim.attack();
+		club.setType("some other type of club");
+		// jim.setWeapon(club);
+		jim.attack();
+	}
+	return (0);
 }

@@ -1,27 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 17:46:24 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/25 08:05:48 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/11/25 09:48:18 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/11/25 18:17:57 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "HumanB.hpp"
 
-int main()
+HumanB::HumanB(const std::string& n) : name(n)
 {
-	std::string B = "HI THIS IS BRAIN";
-	std::string *stringPTR = &B;
-	std::string& stringREF = B;
-	
-	std::cout << &B << "\n";
-	std::cout << stringPTR << "\n";
-	std::cout << &stringREF << "\n";
-	std::cout << B << "\n";
-	std::cout << *stringPTR << "\n";
-	std::cout << stringREF << "\n";
+	weaponB = NULL;
+}
+
+void HumanB::setWeapon(Weapon& weap_b)
+{
+	weaponB = &weap_b;
+}
+
+void HumanB::attack()
+{
+	if (weaponB)
+	{
+		std::cout << name << " attacks with their " <<
+			weaponB->getType() << "\n";
+	}
+	else
+		std::cout << name <<" has no weapon!!\n";
+}
+
+HumanB::~HumanB()
+{
 }

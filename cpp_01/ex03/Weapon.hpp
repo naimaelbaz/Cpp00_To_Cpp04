@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/23 17:46:24 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/25 08:05:48 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/11/25 08:46:00 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/11/25 18:14:11 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
+
 #include <iostream>
 
-int main()
+class Weapon
 {
-	std::string B = "HI THIS IS BRAIN";
-	std::string *stringPTR = &B;
-	std::string& stringREF = B;
-	
-	std::cout << &B << "\n";
-	std::cout << stringPTR << "\n";
-	std::cout << &stringREF << "\n";
-	std::cout << B << "\n";
-	std::cout << *stringPTR << "\n";
-	std::cout << stringREF << "\n";
-}
+private:
+	std::string type;
+public:
+	Weapon(std::string t);
+	void setType(std::string t);
+	const std::string& getType();
+	~Weapon();
+};
+
+#endif

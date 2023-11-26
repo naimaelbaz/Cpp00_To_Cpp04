@@ -6,21 +6,21 @@
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 09:47:23 by nel-baz           #+#    #+#              #
-#    Updated: 2023/11/25 14:37:05 by nel-baz          ###   ########.fr        #
+#    Updated: 2023/11/25 17:32:50 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Zombie
+NAME = Weapon
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Zombie.cpp
+SRCS = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp Zombie.hpp
+%.o: %.cpp Weapon.hpp HumanA.hpp HumanB.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME) $(OBJS)
@@ -34,6 +34,6 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re: all fclean
+re: fclean all
 
 .PHONY: all clean fclean
