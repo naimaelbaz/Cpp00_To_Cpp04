@@ -6,21 +6,21 @@
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/26 09:06:31 by nel-baz           #+#    #+#              #
-#    Updated: 2023/11/27 15:37:24 by nel-baz          ###   ########.fr        #
+#    Updated: 2023/11/28 14:14:11 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = files
+NAME = Harl
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp
+SRCS = main.cpp Harl.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp 
+%.o: %.cpp Harl.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME) $(OBJS)
