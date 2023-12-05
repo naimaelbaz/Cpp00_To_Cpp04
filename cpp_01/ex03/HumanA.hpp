@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 09:47:10 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/25 12:27:20 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/11/29 16:35:03 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ private:
 	Weapon& weaponA;
 	std::string name;
 public:
-	HumanA(Weapon& wep_a, std::string n);
+	HumanA(std::string n, Weapon& weap_A);
 	void attack();
 	~HumanA();
 };

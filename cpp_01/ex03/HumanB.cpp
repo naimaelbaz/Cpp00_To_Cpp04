@@ -6,13 +6,13 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/25 09:48:18 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/11/25 18:17:57 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/11/29 10:41:33 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "HumanB.hpp"
 
-HumanB::HumanB(const std::string& n) : name(n)
+HumanB::HumanB(const std::string n) : name(n)
 {
 	weaponB = NULL;
 }
