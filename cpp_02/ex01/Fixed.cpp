@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 14:34:26 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/05 09:09:07 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/05 11:36:17 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void Fixed::setRawBits(int const raw)
 
 float Fixed::toFloat() const
 {
-	float result = (float)this->FixedNumber / 256;
+	float result = (float)this->FixedNumber / (0b1 << FractionalBits);
 	return(result);
 }
 

@@ -6,12 +6,11 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 16:27:37 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/05 09:09:25 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/05 15:00:23 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-#include <bitset>
 
 int main( void ) {
 Fixed a;
