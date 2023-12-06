@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/01 14:30:44 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/05 09:29:42 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/06 09:13:33 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,22 +31,27 @@ public:
 	float toFloat( void ) const;
 	int toInt( void ) const;
 	
-	static int& max(Fixed& ob1, Fixed& ob2);
-	static int& max(const Fixed& ob1, const Fixed& ob2);
-	static int& min(Fixed& ob1, Fixed& ob2);
-	static int& min(const Fixed& ob1, const Fixed& ob2);
+	static Fixed& max(Fixed& ob1, Fixed& ob2);
+	static const  Fixed& max(const Fixed& ob1, const Fixed& ob2);
+	static Fixed& min(Fixed& ob1, Fixed& ob2);
+	static const Fixed& min(const Fixed& ob1, const Fixed& ob2);
 	
 	Fixed& operator=(const Fixed& ob1);
-	bool operator>(const Fixed& ob1);
-	bool operator<(const Fixed& ob1);
-	bool operator>=(const Fixed& ob1);
-	bool operator<=(const Fixed& ob1);
-	bool operator==(const Fixed& ob1);
-	bool operator!=(const Fixed& ob1);
-	Fixed& operator+(const Fixed& ob1);
-	Fixed& operator-(const Fixed& ob1);
-	Fixed& operator*(const Fixed& ob1);
-	Fixed& operator/(const Fixed& ob1);
+	bool operator>(const Fixed& ob1) const;
+	bool operator<(const Fixed& ob1) const;
+	bool operator>=(const Fixed& ob1) const;
+	bool operator<=(const Fixed& ob1) const;
+	bool operator==(const Fixed& ob1) const;
+	bool operator!=(const Fixed& ob1) const;
+	Fixed operator+(const Fixed& ob1) const;
+	Fixed operator-(const Fixed& ob1) const;
+	Fixed operator*(const Fixed& ob1) const;
+	Fixed operator/(const Fixed& ob1) const;
+	
+	Fixed& operator++();
+	Fixed& operator--();
+	Fixed operator++(int);
+	Fixed operator--(int);
 	
 	~Fixed();
 };
