@@ -6,21 +6,20 @@
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/07 15:58:23 by nel-baz           #+#    #+#              #
-#    Updated: 2023/12/09 09:44:02 by nel-baz          ###   ########.fr        #
+#    Updated: 2023/12/10 18:33:16 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = FragTrap
-
+NAME = DiamondTrap
 CXX = c++
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -Wshadow -Wno-shadow -std=c++98
 
-SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME) $(OBJS)
