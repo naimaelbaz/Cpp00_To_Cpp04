@@ -5,22 +5,22 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/03 16:02:35 by nel-baz           #+#    #+#              #
-#    Updated: 2023/12/05 18:38:07 by nel-baz          ###   ########.fr        #
+#    Created: 2023/12/07 15:58:23 by nel-baz           #+#    #+#              #
+#    Updated: 2023/12/09 09:43:51 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Fixed
+NAME = ScavTrap
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Fixed.cpp
+SRCS = main.cpp ClapTrap.cpp ScavTrap.cpp
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp Fixed.hpp
+%.o: %.cpp ClapTrap.hpp ScavTrap.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME) $(OBJS)
@@ -36,4 +36,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean
+.PHONY: clean

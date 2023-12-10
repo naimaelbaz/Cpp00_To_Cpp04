@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 16:27:37 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/06 09:35:15 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/12/08 16:12:39 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/12/09 09:51:00 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef FragTrap_HPP
+#define FragTrap_HPP
 
-int main( void ) {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	return 0;
-}
+#include "ClapTrap.hpp"
+
+class FragTrap : public ClapTrap
+{
+public:
+	FragTrap();
+	FragTrap(std::string name);
+	FragTrap(const FragTrap& ob1);
+	FragTrap& operator=(const FragTrap& ob1);
+	~FragTrap();
+
+	void attack(const std::string& target);
+	void highFivesGuys(void);
+};
+
+#endif

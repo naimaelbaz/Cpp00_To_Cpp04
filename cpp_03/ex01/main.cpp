@@ -5,26 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 16:27:37 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/05 18:46:59 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/12/08 09:38:59 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/12/09 10:18:58 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-int main( void ) {
-Fixed a;
-Fixed const b( 10 );
-Fixed const c( 42.42f );
-Fixed const d( b );
-a = Fixed( 1234.4321f );
-std::cout << "a is " << a << std::endl;
-std::cout << "b is " << b << std::endl;
-std::cout << "c is " << c << std::endl;
-std::cout << "d is " << d << std::endl;
-std::cout << "a is " << a.toInt() << " as integer" << std::endl;
-std::cout << "b is " << b.toInt() << " as integer" << std::endl;
-std::cout << "c is " << c.toInt() << " as integer" << std::endl;
-std::cout << "d is " << d.toInt() << " as integer" << std::endl;
-return 0;
+int main()
+{
+	ClapTrap ob1("Player1");
+	ScavTrap ob2("Player2");
+	ob1.attack("target1");
+	ob2.attack("target2");
+	ob1.takeDamage(5);
+	ob2.takeDamage(26);
+	ob1.beRepaired(5);
+	ob2.beRepaired(10);
+	ob2.guardGate();
 }
+

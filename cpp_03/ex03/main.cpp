@@ -5,22 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/29 16:27:37 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/06 09:35:15 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/12/08 09:38:59 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/12/10 14:57:44 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-int main( void ) {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
-	return 0;
+int main()
+{
+	ScavTrap ob("hello");
+	ClapTrap& ob1 = ob;
+	// ClapTrap ob2("Player");
+	// ScavTrap ob2("Player2");
+	// FragTrap ob3("Player3");
+	ob1.attack("target1");
+	ob.attack("target2");
+	// ob3.attack("target3");
+	ob1.takeDamage(5);
+	// ob2.takeDamage(26);
+	// ob3.takeDamage(15);
+	ob1.beRepaired(5);
+	// ob2.beRepaired(10);
+	// ob3.beRepaired(10);
+	// ob2.guardGate();
+	// ob3.highFivesGuys();
+	// delete ob1;
 }

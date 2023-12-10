@@ -6,7 +6,7 @@
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/23 09:47:23 by nel-baz           #+#    #+#              #
-#    Updated: 2023/11/23 18:06:48 by nel-baz          ###   ########.fr        #
+#    Updated: 2023/12/06 09:10:50 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,6 @@ clean:
 fclean: clean
 	rm -rf $(NAME)
 
-re: all fclean
+re: fclean all
 
 .PHONY: all clean fclean
