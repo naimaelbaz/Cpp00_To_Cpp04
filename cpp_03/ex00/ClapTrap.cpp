@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 16:07:28 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/09 10:28:33 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 09:23:42 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,10 @@
 ClapTrap::ClapTrap()
 {
 	std::cout<<"Default constructor called\n";
+	this->name = "Default";
+	this->HitPoints = 10;
+	this->EnergyPoints = 10;
+	this->AttackDamage = 0;
 }
 
 ClapTrap::ClapTrap(std::string name)
@@ -56,7 +60,7 @@ void ClapTrap::attack(const std::string& target)
 		EnergyPoints--;
 		std::cout<<name<<" attacks "<<target<<
 				", causing "<<AttackDamage<<
-				" points of damage!\n";
+				" points of damage👾!\n";
 	}
 	else 
 		std::cout<< name <<" is out of energy or critically damaged🥱!\n";
