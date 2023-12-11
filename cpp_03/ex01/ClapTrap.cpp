@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 16:07:28 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/11 09:30:30 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 10:27:51 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ ClapTrap::ClapTrap(const ClapTrap& ob1)
 
 ClapTrap& ClapTrap::operator=(const ClapTrap& ob1)
 {
-	std::cout << "Copy assignment operator called\n";
+	std::cout << "ClapTrap Copy assignment operator called\n";
 	if(this == &ob1)
 		return(*this);
 	this->name = ob1.name;
@@ -60,7 +60,7 @@ void ClapTrap::attack(const std::string& target)
 		EnergyPoints--;
 		std::cout<<name<<" (ClapTrap) attacks "<<target<<
 				", causing "<<AttackDamage<<
-				" points of damage👾!\n";
+				" points of damage!\n";
 	}
 	else 
 		std::cout<< name <<" is out of energy or critically damaged🥱!\n";

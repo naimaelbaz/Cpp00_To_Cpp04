@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 09:38:59 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/10 18:25:54 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 10:32:53 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main()
 {
-	ClapTrap ob1("Player1");
-	ScavTrap ob2("Player2");
+	ScavTrap ob1("Player1");
+	ScavTrap ob2 = ob1;
 
 	ob1.attack("target1");
 	ob2.attack("target2");

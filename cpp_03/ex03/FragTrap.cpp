@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 16:20:38 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/11 09:37:20 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 11:37:16 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	this->AttackDamage = 20;
 }
 
-FragTrap::FragTrap(const FragTrap& ob1)
+FragTrap::FragTrap(const FragTrap& ob1) : ClapTrap(ob1)
 {
 	std::cout << "FragTrap Copy constructor called\n";
-	*this = ob1;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& ob1)
@@ -43,6 +42,19 @@ FragTrap& FragTrap::operator=(const FragTrap& ob1)
 FragTrap::~FragTrap()
 {
 	std::cout << "FragTrap Destructor called\n";
+}
+
+void FragTrap::attack(const std::string& target)
+{
+	if(EnergyPoints > 0 && HitPoints > 0)
+	{
+		EnergyPoints--;
+		std::cout<<name<<" (FragTrap) attacks! "<<target<<
+				", It deals "<<AttackDamage<<
+				" damage to the target👾!\n";
+	}
+	else 
+		std::cout<< name <<" is out of energy or critically damaged🥱!\n";
 }
 
 void FragTrap::highFivesGuys(void)

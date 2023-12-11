@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 16:20:38 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/11 09:39:44 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 11:26:40 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,9 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	this->AttackDamage = 20;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& ob1)
+ScavTrap::ScavTrap(const ScavTrap& ob1) : ClapTrap(ob1)
 {
 	std::cout << "ScavTrap Copy constructor called\n";
-	*this = ob1;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& ob1)
@@ -52,7 +51,7 @@ void ScavTrap::attack(const std::string& target)
 		EnergyPoints--;
 		std::cout<<name<<" (ScavTrap) attacks "<<target<<
 				", It deals "<<AttackDamage<<
-				" damage to the target.\n";
+				" damage to the target👾!\n";
 	}
 	else 
 		std::cout<< name <<" is out of energy or critically damaged🥱!\n";

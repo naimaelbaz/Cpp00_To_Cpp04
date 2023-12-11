@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 16:12:39 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/11 09:32:15 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 10:11:40 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ public:
 	FragTrap& operator=(const FragTrap& ob1);
 	~FragTrap();
 
+	void attack(const std::string& target);
 	void highFivesGuys(void);
 };
 

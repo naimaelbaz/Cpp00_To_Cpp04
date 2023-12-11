@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/10 16:54:48 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/10 20:10:41 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 11:29:52 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,9 @@ DiamondTrap::DiamondTrap(std::string name) : ClapTrap(name +  "_clap_name")
 	this->AttackDamage = FragTrap::AttackDamage;
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap& ob)
+DiamondTrap::DiamondTrap(const DiamondTrap& ob) : ClapTrap(ob)
 {
 	std::cout<<"DiamondTrap copy constructor called\n";
-	*this = ob;
 }
 
 DiamondTrap& DiamondTrap::operator=(const DiamondTrap& ob)
@@ -42,7 +41,7 @@ DiamondTrap& DiamondTrap::operator=(const DiamondTrap& ob)
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "ClapTrap Destructor called\n";
+	std::cout << "DiamondTrap Destructor called\n";
 }
 
 void DiamondTrap::attack(const std::string& target)

@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 15:58:12 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/10 20:38:40 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 11:29:25 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ protected:
 	int EnergyPoints;
 	int AttackDamage;
 public:
-	ClapTrap(); // attrebute define here
+	ClapTrap();
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap& ob1);
 	ClapTrap& operator=(const ClapTrap& ob1);
