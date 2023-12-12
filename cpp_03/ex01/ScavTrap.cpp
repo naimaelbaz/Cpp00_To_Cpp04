@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/08 16:20:38 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/11 11:26:40 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/11 15:47:08 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 ScavTrap::ScavTrap(const ScavTrap& ob1) : ClapTrap(ob1)
 {
 	std::cout << "ScavTrap Copy constructor called\n";
+	*this = ob1;
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& ob1)
