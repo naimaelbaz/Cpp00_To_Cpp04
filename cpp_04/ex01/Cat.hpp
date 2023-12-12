@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:24:39 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/12 10:54:05 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/12 14:59:42 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,20 @@
 #define CAT_HPP
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
 class Cat : public Animal
 {
+private:
+	Brain *CatBrain;
 public:
-	Cat();
+	Cat(void);
 	Cat(const Cat& ob);
 	Cat& operator=(const Cat& ob);
-	~Cat();
+	~Cat(void);
 
-	void makeSound() const;
+	void makeSound(void) const;
+	Brain *getCatBeain(void) const;
 };
 
 #endif
