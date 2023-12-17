@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:48:13 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/17 10:24:06 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 13:57:25 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,6 @@ public:
 	Brain(const Brain& ob);
 	Brain& operator=(const Brain& ob);
 	~Brain(void);
-
-	// std::string* getIdeas(void) const;
-	void setIdeas(std::string ideas);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:56:13 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/16 16:25:33 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 14:11:45 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 Dog::Dog()
 {
+	std::cout<<"Dog Default Constructor Called\n";
 	this->type = "Dog";
 	this->DogBrain = new Brain();
-	std::cout<<"Dog Default Constructor Called\n";
 }
 
 Dog::Dog(const Dog& ob)

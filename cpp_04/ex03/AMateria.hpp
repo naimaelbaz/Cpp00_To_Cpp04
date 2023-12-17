@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 09:38:48 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/16 16:36:43 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 14:50:58 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define AMATERIA_HPP
 
 #include <iostream>
-#include "ICharacter.hpp"
 
 class ICharacter;
 

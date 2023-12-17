@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:43:36 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/16 16:25:25 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 14:11:40 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 Cat::Cat()
 {
+	std::cout<<"Cat Default Constructor Called\n";
 	type = "Cat";
 	CatBrain = new Brain();
-	std::cout<<"Cat Default Constructor Called\n";
 }
 
 Cat::Cat(const Cat& ob)

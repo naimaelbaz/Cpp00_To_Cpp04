@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:43:36 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/17 11:20:39 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 14:06:44 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 Cat::Cat()
 {
+	std::cout<<"Cat Default Constructor Called\n";
 	type = "Cat";
 	CatBrain = new Brain();
-	std::cout<<"Cat Default Constructor Called\n";
 }
 
 Cat::Cat(const Cat& ob)
@@ -30,8 +30,8 @@ Cat& Cat::operator=(const Cat& ob)
 	std::cout<<"Cat Copy Assignment Operator Called\n";
 	if (this == &ob)
 		return (*this);
-	if(this->CatBrain)
-		delete this->CatBrain;
+	Animal::operator=(ob);
+	delete this->CatBrain;
 	this->CatBrain = new Brain();
 	*this->CatBrain = *ob.CatBrain;
 	return(*this);

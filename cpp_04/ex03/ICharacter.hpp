@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 13:55:47 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/16 16:52:28 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 14:49:06 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@
 #include <iostream>
 
 #include "AMateria.hpp"
-
-class AMateria;
 
 class ICharacter
 {

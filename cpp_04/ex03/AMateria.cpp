@@ -6,11 +6,12 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/14 09:41:02 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/16 16:37:38 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 14:52:01 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AMateria.hpp"
+#include "ICharacter.hpp"
 
 AMateria::AMateria()
 {
@@ -45,5 +46,5 @@ std::string const& AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-	std::cout<<"fooo " << target.getName() << std::endl;//ask
+	std::cout<<"fooo " << target.getName() << std::endl;
 }

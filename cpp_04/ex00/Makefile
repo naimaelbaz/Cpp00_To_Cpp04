@@ -6,7 +6,7 @@
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/12/12 10:10:41 by nel-baz           #+#    #+#              #
-#    Updated: 2023/12/16 15:52:42 by nel-baz          ###   ########.fr        #
+#    Updated: 2023/12/17 13:03:09 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME) $(OBJS)
 
-$(NAME): $(OBJS) 
+$(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
 clean:
