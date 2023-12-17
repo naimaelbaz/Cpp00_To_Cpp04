@@ -1,42 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 10:43:36 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/16 16:24:47 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/12/12 11:32:18 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/12/12 11:36:54 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "WrongCat.hpp"
 
-Cat::Cat()
+WrongCat::WrongCat()
 {
-	type = "Cat";
-	std::cout<<"Cat Default Constructor Called\n";
+	type = "WrongCat";
+	std::cout<<"WrongCat Default Constructor Called\n";
 }
 
-Cat::Cat(const Cat& ob)
+WrongCat::WrongCat(const WrongCat& ob)
 {
-	std::cout<<"Cat Copy Constructor Called\n";
+	std::cout<<"WrongCat Copy Constructor Called\n";
 	*this = ob;
 }
 
-Cat& Cat::operator=(const Cat& ob)
+WrongCat& WrongCat::operator=(const WrongCat& ob)
 {
-	std::cout<<"Cat Copy Assignment Operator Called\n";
-	Animal::operator=(ob);
+	std::cout<<"WrongCat Copy Assignment Operator Called\n";
+	WrongAnimal::operator=(ob);
 	return(*this);
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-	std::cout<<"Cat Destructor Called\n";
+	std::cout<<"WrongCat Destructor Called\n";
 }
 
-void Cat::makeSound() const
+void WrongCat::makeSound() const
 {
 	std::cout<<type<<" make sound Meow.Meow.Meow..\n";
 }

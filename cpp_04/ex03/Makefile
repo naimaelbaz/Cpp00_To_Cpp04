@@ -5,21 +5,21 @@
 #                                                     +:+ +:+         +:+      #
 #    By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/12/12 10:10:41 by nel-baz           #+#    #+#              #
-#    Updated: 2023/12/16 15:52:42 by nel-baz          ###   ########.fr        #
+#    Created: 2023/12/14 09:37:31 by nel-baz           #+#    #+#              #
+#    Updated: 2023/12/16 08:55:24 by nel-baz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Animal
+NAME = AMateria
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongCat.cpp WrongAnimal.cpp
+SRCS = AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp  
 
 OBJS = $(SRCS:.cpp=.o)
 
-%.o: %.cpp Animal.hpp Dog.hpp Cat.hpp WrongCat.hpp WrongAnimal.hpp
+%.o: %.cpp AMateria.hpp Character.hpp Cure.hpp ICharacter.hpp IMateriaSource.hpp Ice.hpp MateriaSource.hpp 
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME) $(OBJS)

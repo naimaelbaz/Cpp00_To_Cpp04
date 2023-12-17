@@ -1,42 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   AMateria.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 10:43:36 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/16 16:24:47 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/12/14 09:41:02 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/12/16 16:37:38 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "AMateria.hpp"
 
-Cat::Cat()
+AMateria::AMateria()
 {
-	type = "Cat";
-	std::cout<<"Cat Default Constructor Called\n";
 }
 
-Cat::Cat(const Cat& ob)
+AMateria::AMateria(std::string const& type)
 {
-	std::cout<<"Cat Copy Constructor Called\n";
+	this->type = type;
+}
+
+AMateria::AMateria(const AMateria& ob)
+{
 	*this = ob;
 }
 
-Cat& Cat::operator=(const Cat& ob)
+AMateria& AMateria::operator=(const AMateria& ob)
 {
-	std::cout<<"Cat Copy Assignment Operator Called\n";
-	Animal::operator=(ob);
+	if(this == &ob)
+		return(*this);
+	this->type = ob.type;
 	return(*this);
 }
 
-Cat::~Cat()
+AMateria::~AMateria()
 {
-	std::cout<<"Cat Destructor Called\n";
 }
 
-void Cat::makeSound() const
+std::string const& AMateria::getType() const
 {
-	std::cout<<type<<" make sound Meow.Meow.Meow..\n";
+	return(type);
+}
+
+void AMateria::use(ICharacter& target)
+{
+	std::cout<<"fooo " << target.getName() << std::endl;//ask
 }

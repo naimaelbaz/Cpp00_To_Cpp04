@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:28:26 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/12 11:29:25 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/15 16:43:55 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ public:
 	WrongAnimal(void);
 	WrongAnimal(const WrongAnimal& ob);
 	WrongAnimal& operator=(const WrongAnimal& ob);
-	virtual ~WrongAnimal(void);
+	~WrongAnimal(void);
 
 	void makeSound(void) const;
 	std::string getType(void) const;

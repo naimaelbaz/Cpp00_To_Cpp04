@@ -5,49 +5,43 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 10:58:05 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/17 10:29:47 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/12/14 09:41:18 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/12/16 16:52:39 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
-#include "Dog.hpp"
-#include "WrongCat.hpp"
+#include "MateriaSource.hpp"
+#include "Ice.hpp"
+#include "Cure.hpp"
 
 // void pop()
 // {
-// 	system("leaks Brain");
+// 	system("leaks AMateria");
 // }
 
 int main()
 {
 	// atexit(pop);
-	// size_t size = 4;
-	// Animal *p[size];
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+	ICharacter* me = new Character("me");
+	AMateria* tmp1;
+	AMateria* tmp2;
+	tmp1 = src->createMateria("ice");
+	me->equip(tmp1);
+	tmp2 = src->createMateria("cure");
+	me->equip(tmp2);
+	ICharacter* bob = new Character("bob");
+	me->use(0, *bob);
+	me->use(1, *bob);
+	me->unequip(0);
+	me->unequip(1);
 	
-	// for (size_t i = 0; i < size; i++)
-	// {
-	// 	if (i < size/2)
-	// 		p[i] = new Dog();
-	// 	else
-	// 		p[i] = new Cat();
-	// }
-	// std::cout<<"------------------------\n";
-	// for (size_t i = 0; i < size; i++)
-	// {
-	// 	std::cout<<p[i]->getType()<<"\n";
-	// 	p[i]->makeSound();
-	// }
-	// std::cout<<"------------------------\n";
-
-	// for (size_t i = 0; i < size; i++)
-	// {
-	// 	delete p[i];
-	// }
-	
-	Cat c;
-	{
-		Cat d = c;
-	}
+	delete tmp1;
+	delete tmp2;
+	delete bob;
+	delete me;
+	delete src;
 	return 0;
 }

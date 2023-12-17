@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:58:05 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/12 11:37:52 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/16 19:00:57 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,16 +33,17 @@ int main()
 	delete i;
 
 
-	// const WrongAnimal* meta = new WrongAnimal();
-	// const WrongAnimal* i = new WrongCat();
-	// std::cout<<"-------------------------------\n";
-	// std::cout << ">>>>>>\t" << i->getType() << "\t<<<<<<" << std::endl;
-	// std::cout << ">>>>>>\t" << meta->getType() << "\t<<<<<<" << std::endl;
-	// std::cout<<"-------------------------------\n";
-	// i->makeSound();
-	// meta->makeSound();
-	// std::cout<<"-------------------------------\n";
-	// delete meta;
-	// delete i;
+	std::cout<<"-------------------------------\n";
+	const WrongAnimal* meta1 = new WrongAnimal();
+	const WrongAnimal* k = new WrongCat();
+	std::cout<<"-------------------------------\n";
+	std::cout << ">>>>>>\t" << k->getType() << "\t<<<<<<" << std::endl;
+	std::cout << ">>>>>>\t" << meta1->getType() << "\t<<<<<<" << std::endl;
+	std::cout<<"-------------------------------\n";
+	k->makeSound();
+	meta1->makeSound();
+	std::cout<<"-------------------------------\n";
+	delete meta1;
+	delete k;
 	return 0;
 }

@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 15:58:12 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/11 11:25:07 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/13 12:41:25 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ public:
 	ClapTrap(std::string name);
 	ClapTrap(const ClapTrap& ob1);
 	ClapTrap& operator=(const ClapTrap& ob1);
-	virtual ~ClapTrap();
+	 ~ClapTrap();
 
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);

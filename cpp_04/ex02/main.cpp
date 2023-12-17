@@ -1,32 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/12 10:13:28 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/13 10:15:00 by nel-baz          ###   ########.fr       */
+/*   Created: 2023/12/12 10:58:05 by nel-baz           #+#    #+#             */
+/*   Updated: 2023/12/16 16:19:57 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-#include <iostream>
-
-class Animal
+int main()
 {
-protected:
-	std::string type;
-public:
-	Animal(void);
-	Animal(const Animal& ob);
-	Animal& operator=(const Animal& ob);
-	virtual ~Animal(void);
-
-	virtual void makeSound(void) const;
-	std::string getType(void) const;
-};
-
-#endif
+	// Animal meta;
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	i->makeSound();
+	j->makeSound();
+	delete j;
+	delete i;
+}

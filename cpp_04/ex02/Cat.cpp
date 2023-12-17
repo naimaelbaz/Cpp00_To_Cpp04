@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:43:36 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/17 11:20:39 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/16 16:25:25 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ Cat& Cat::operator=(const Cat& ob)
 		delete this->CatBrain;
 	this->CatBrain = new Brain();
 	*this->CatBrain = *ob.CatBrain;
+	Animal::operator=(ob);
 	return(*this);
 }
 
@@ -46,4 +47,9 @@ Cat::~Cat()
 void Cat::makeSound() const
 {
 	std::cout<<type<<" make sound Meow.Meow.Meow..\n";
+}
+
+Brain* Cat::getCatBeain() const
+{
+	return(CatBrain);
 }

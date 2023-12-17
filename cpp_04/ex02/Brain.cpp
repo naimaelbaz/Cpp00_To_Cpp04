@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 12:06:34 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/17 11:20:11 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/13 10:01:09 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Brain& Brain::operator=(const Brain& ob)
 	if (this == &ob)
 		return *this;
 	for (int i = 0; i < 100; i++)
-		this->ideas[i] = ob.ideas[i];
+		this->ideas[i] = ob.ideas[i];	
 	return *this; 
 }
 
@@ -37,3 +37,11 @@ Brain::~Brain()
 {
 	std::cout << "Brain Destructor Called\n";
 }
+
+// std::string* Brain::getIdeas() const
+// {
+// 	return ideas;
+// }
+
+
+

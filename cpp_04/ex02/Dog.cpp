@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:56:13 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/17 11:20:46 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/16 16:25:33 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ Dog& Dog::operator=(const Dog& ob)
 		delete this->DogBrain;
 	this->DogBrain = new Brain();
 	*this->DogBrain = *ob.DogBrain;
+	Animal::operator=(ob);
 	return(*this);
 }
 

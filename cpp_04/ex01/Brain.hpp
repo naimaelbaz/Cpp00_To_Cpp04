@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 11:48:13 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/12 14:56:31 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 10:24:06 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class Brain
 {
 private:
-	std::string* ideas[100];
+	std::string ideas[100];
 public:
 	Brain(void);
 	Brain(const Brain& ob);
@@ -26,7 +26,7 @@ public:
 	~Brain(void);
 
 	// std::string* getIdeas(void) const;
-	// void setIdeas(std::string *ideas);
+	void setIdeas(std::string ideas);
 };
 
 #endif

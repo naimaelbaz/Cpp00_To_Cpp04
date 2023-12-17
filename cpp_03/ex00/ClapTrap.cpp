@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 16:07:28 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/11 10:18:39 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/14 17:14:14 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	if(HitPoints > 0)
+	if (HitPoints > 0)
 	{
 		(HitPoints -= amount) < 0 ? HitPoints = 0 : HitPoints;
 		std::cout<< name << " takes damage🤕!!\n";

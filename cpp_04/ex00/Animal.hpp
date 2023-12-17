@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:13:28 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/12 11:17:42 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/16 18:59:26 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@ class Animal
 {
 protected:
 	std::string type;
+
 public:
 	Animal(void);
-	Animal(const Animal& ob);
-	Animal& operator=(const Animal& ob);
+	Animal(const Animal &ob);
+	Animal &operator=(const Animal &ob);
 	virtual ~Animal(void);
 
 	virtual void makeSound(void) const;

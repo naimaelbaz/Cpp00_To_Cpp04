@@ -6,7 +6,7 @@
 /*   By: nel-baz <nel-baz@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 10:24:39 by nel-baz           #+#    #+#             */
-/*   Updated: 2023/12/12 14:59:42 by nel-baz          ###   ########.fr       */
+/*   Updated: 2023/12/17 10:29:07 by nel-baz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,6 @@ public:
 	~Cat(void);
 
 	void makeSound(void) const;
-	Brain *getCatBeain(void) const;
 };
 
 #endif
